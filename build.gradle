@@ -5,6 +5,9 @@ buildscript {
 }
 
 plugins {
+	// Note that you will need to run the 'eclipse' gradle task to set up
+	// the VSCode IDE, so the classpath file can be created for dependency
+	// management.
 	id 'eclipse-wtp'
 	id 'idea'
 	id 'org.springframework.boot' version '2.2.4.RELEASE'
