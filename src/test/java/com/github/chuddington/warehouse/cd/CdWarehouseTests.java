@@ -2,6 +2,7 @@ package com.github.chuddington.warehouse.cd;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class CdWarehouseTests {
@@ -14,10 +15,17 @@ public class CdWarehouseTests {
     // 6: Test should pass
 
     /*
-     * TODO: CD Stock Levels can be retrieved
-     * TODO: Add CD Stock to the Warehouse
-     * TODO:
+     * DONE: CD Stock Levels can be retrieved
+     * DONE: Add CD Stock to the Warehouse
      */
+
+    private final WarehouseProduct productOneTwoThree = new WarehouseProduct(123);
+    private final Warehouse warehouse = new Warehouse();
+
+    @BeforeEach
+    void setUp() {
+        warehouse.addProduct(productOneTwoThree, 10);
+    }
 
     @Test
     void testSomething() {
@@ -25,8 +33,7 @@ public class CdWarehouseTests {
     }
 
     @Test
-    void should_get_stock_count() {
-        Product product = new Product();
-        assertEquals(10, product.getStock(123));
+    void warehouseHasState() {
+        assertEquals(10, warehouse.getStock(productOneTwoThree));
     }
 }

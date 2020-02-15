@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "eamodio.gitlens",
+        "ms-vsliveshare.vsliveshare-pack",
+        "pivotal.vscode-boot-dev-pack",
+        "richardwillis.vscode-gradle-extension-pack",
+        "vscjava.vscode-java-pack"
+    ]
+}
